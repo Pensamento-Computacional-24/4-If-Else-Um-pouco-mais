@@ -9,15 +9,20 @@
     */
 
     // Entrada de dados
+    const aluguel = 15;
+    const dias = parseInt(prompt("Por quantos dias ficará com a bicicleta?"));
     
+    const desconto = 0.2;
 
-    
     // Processamento
-    
-
+    let custo;
+    if (dias <= 7) custo = dias * aluguel;
+    // Caso esteja dentro de 7 dias: dias * 15
+    else custo = (aluguel - (aluguel * desconto)) * dias;
+    // Caso maior que 7 dias: (15 - (15 * 20%)) * dias
     
     // Saída de dados
-
+    document.write(`O aluguel da bicileta custará R$ ${custo.toFixed(2)}.`);
     
 
 </script>
