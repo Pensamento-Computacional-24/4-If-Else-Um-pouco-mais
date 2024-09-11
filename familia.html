@@ -11,15 +11,19 @@
     */
 
     // Entrada de dados
-    
-
+    const pessoas = parseInt(prompt("Quantas pessoas fazem parte da família:"));
     
     // Processamento
-    
+    let mensagem;
+
+    if (pessoas <= 2) mensagem = "Hatch pequeno";
+    else if (pessoas <= 4) mensagem = "Hatch médio";
+    else if (pessoas == 5) mensagem = "Sedan médio";
+    else mensagem = "SUV";
 
     
     // Saída de dados
-
+    document.write(`Certamente vocês precisarão de um ${mensagem} para comportar ${pessoas} pessoas.`);
     
 
 </script>
