@@ -10,15 +10,20 @@
     */
 
     // Entrada de dados
-    
+    const valor = parseFloat(prompt("Informe o valor do terreno:"));
+    const tempo = parseInt(prompt("Informe em quantos anos pagará:"));
 
-    
+    let variacao;
     // Processamento
-    
-
+    if (tempo <= 5) variacao = 0.95;
+    // Desconto de 5% sobre o 100%
+    else if (tempo <= 10) variacao = 1.15;
+    // Acréscimo de 15% sobre o 100%
+    else variacao = 1.30;
+    // Acréscimo de 30% sobre o 100%
     
     // Saída de dados
-
+    document.write(`Nestes ${tempo} anos o valor de R$ ${valor.toFixed(2)} passará a custar R$ ${(valor*variacao).toFixed(2)}.`);
     
 
 </script>
