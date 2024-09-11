@@ -9,15 +9,19 @@
     */
 
     // Entrada de dados
-    
+    const assunto = prompt("Qual o assunto mais difícil? Variáveis e Operadores (VO) ou Estrutura de Decisão (ED) ou Estruturas de Repetição (RE)").toUpperCase();
 
     
     // Processamento
-    
+    let mensagem;
+    if (assunto == "VO") mensagem = "estar no 1º Tri";
+    else if (assunto == "ED") mensagem = "estar no 2º Tri";
+    else if (assunto == "RE") mensagem = "estar no 3º Tri";
+    else mensagem = "ter se enganado com as disciplinas"
 
     
     // Saída de dados
-
+    document.write(`Aposto que você deve ${mensagem}.`);
     
 
 </script>
