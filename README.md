@@ -65,16 +65,35 @@ if (numeroImparPositivo % 2 != 0 && numeroImparPositivo >= 0) document.write(`O 
 else document.write(`O número ${numeroImparPositivo} não é ímpar e positivo`);
 ```
 
-## If... If... Else
+## If... Else If... Else
 
-Dentre as várias formas de se utilizar o If Else, quando se tem mais de uma verificação é possível utilizar-se da abertura de vários Ifs com apenas um fechamento, por exemplo:
+Outra utilização incrível das estruturas de condição é a possibilidade de validar mais de uma condição, como por exemplo:
+
+```
+const turno = prompt("Digite M-manhã, V-vespertino, N-noturno");
+
+if (turno == "M") document.write("Bom dia!");
+else if (turno == "V") document.write("Boa tarde!");
+else if (turno == "N") document.write("Boa noite!");
+else document.write("Valor inválido");
+```
+
+Destrinchando temos que:
+
+- Na linha 1, receboms um dados proveniente do usuário e armazenamos da variável turno, cujo valor não poderá ser alterado.
+- Na linha 3, é realizada a comparação ```turno == "M"```, caso o usuário tenha digitado a letra M, será apresentado "Bom dia!" em tela.
+- Na linha 4, caso contrário, realiza a comparação ```turno == "V"```, caso o usuário tenha digitado a letra V, será apresentado "Boa tarde!" em tela.
+- Na linha 5, caso contrário, realiza a comparação ```turno == "N"```, caso o usuário tenha digitado a letra N, será apresentado "Boa noite!" em tela.
+- Caso nenhuma comparação seja válida, será apresentado "Valor inválido" em tela.
+
+## If... apenas
+
+Dentre as várias formas de se utilizar o If Else, também é possível validar apenas se algo pode ser verdade, em obter o resultado da falsidade, como por exemplo:
 
 ```
 let numero = 5;
 
 if (numero % 2 == 0) document.write(`O número ${numero} é par`);
-if (numero >= 0) document.write(`O número ${numero} é positivo`);
-else document.write(`O número ${numero} é impar`);
 ```
 
 Por outro lado este método não é tão eficiente quando busca-se obter mais de um resultado.
